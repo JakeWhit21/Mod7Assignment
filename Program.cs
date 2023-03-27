@@ -48,12 +48,13 @@ int hours;
 int minutes;
 int seconds;
 
-string choice = "";
+string choice;
 do
 {
     // display choices to user
     Console.WriteLine("1) Add Movie");
     Console.WriteLine("2) Display All Movies");
+    Console.WriteLine("3 Find Movie");
     Console.WriteLine("Enter to quit");
     // input selection
     choice = Console.ReadLine();
@@ -127,6 +128,10 @@ do
             Console.WriteLine(m.Display());
         }
     }
-} while (choice == "1" || choice == "2");
+    else if (choice == "3")
+    {
+        
+    }
+} while (choice == "1" || choice == "2" || choice == "3");
 
 logger.Info("Program ended");
